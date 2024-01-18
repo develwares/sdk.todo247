@@ -13,12 +13,12 @@ class Http {
                 ...params
             },
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/json'
             },
         });
         return response.data;
     }
-    async get(url, params = {}) {
+    async get(url, params = {}, headers = {}) {
         const response = await axios_1.default.get(`${this.urlBase}${url}`, {
             params,
             headers: {
@@ -27,7 +27,7 @@ class Http {
         });
         return response.data;
     }
-    async post(url, data = {}) {
+    async post(url, data = {}, headers = {}) {
         const response = await axios_1.default.post(`${this.urlBase}${url}`, data, {
             headers: {
                 'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ class Http {
         });
         return response.data;
     }
-    async put(url, data = {}) {
+    async put(url, data = {}, headers = {}) {
         const response = await axios_1.default.put(`${this.urlBase}${url}`, data, {
             headers: {
                 'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ class Http {
         });
         return response.data;
     }
-    async delete(url) {
+    async delete(url, headers = {}) {
         const response = await axios_1.default.delete(`${this.urlBase}${url}`, {
             headers: {
                 'Content-Type': 'application/json',

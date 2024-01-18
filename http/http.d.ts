@@ -6,9 +6,9 @@ export declare class Http {
         username: string;
         password: string;
     }): Promise<IResponse<T>>;
-    get<T>(url: string, params?: {}): Promise<IResponse<T>>;
-    post<T>(url: string, data?: any): Promise<IResponse<T>>;
-    put<T>(url: string, data?: any): Promise<IResponse<T>>;
-    delete<T>(url: string): Promise<IResponse<T>>;
+    get<T>(url: string, params?: {}, headers?: {}): Promise<IResponse<T>>;
+    post<T>(url: string, data?: any, headers?: {}): Promise<IResponse<T>>;
+    put<T>(url: string, data?: any, headers?: {}): Promise<IResponse<T>>;
+    delete<T>(url: string, headers?: {}): Promise<IResponse<T>>;
     private static setHeaders;
 }

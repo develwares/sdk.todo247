@@ -50,36 +50,36 @@ class AuthRepository {
             throw error;
         }
     }
-    createAccount(data) {
+    createAccount(data, adminToken) {
         try {
-            return this.http.post(`${this.apiUrl}/create-account`, data);
+            return this.http.post(`${this.apiUrl}/create-account`, data, { 'Authorization': `Bearer ${adminToken}` });
         }
         catch (error) {
             console.log({ error });
             throw error;
         }
     }
-    createCode(data) {
+    createCode(data, adminToken) {
         try {
-            return this.http.post(`${this.apiUrl}/create-code`, data);
+            return this.http.post(`${this.apiUrl}/create-code`, data, { 'Authorization': `Bearer ${adminToken}` });
         }
         catch (error) {
             console.log({ error });
             throw error;
         }
     }
-    generateNewCode(data) {
+    generateNewCode(data, adminToken) {
         try {
-            return this.http.post(`${this.apiUrl}/generate-new-code`, data);
+            return this.http.post(`${this.apiUrl}/generate-new-code`, data, { 'Authorization': `Bearer ${adminToken}` });
         }
         catch (error) {
             console.log({ error });
             throw error;
         }
     }
-    validateCellPhone(data) {
+    validateCellPhone(data, adminToken) {
         try {
-            return this.http.post(`${this.apiUrl}/validate-cellphone`, data);
+            return this.http.post(`${this.apiUrl}/validate-cellphone`, data, { 'Authorization': `Bearer ${adminToken}` });
         }
         catch (error) {
             console.log({ error });
