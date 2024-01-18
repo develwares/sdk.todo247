@@ -1,0 +1,18 @@
+import { IResponse } from "@todo247/common";
+import { ILoginDto } from "../dtos/security/auth/login.dto";
+import { ICreateAccountDto } from "../dtos/security/auth/create-account.dto";
+import { IValidateCellPhoneDto } from "../dtos/security/auth/validate-cellphone.dto";
+import { ICreateCodeDto } from "../dtos/security/code/create-code.dto";
+import { ILoginResponse } from "../responses/login.response";
+import { IAdminTokenResponse } from "../responses/admin-token.response";
+import { IRefreshDto } from "../dtos/security/auth/refresh.dto";
+import { CodeModel } from "./../../models-security";
+export interface IAuthRepository {
+    getAdminToken(): Promise<IResponse<IAdminTokenResponse>>;
+    login(data: ILoginDto): Promise<IResponse<ILoginResponse>>;
+    refreshToken(data: IRefreshDto): Promise<IResponse<ILoginResponse>>;
+    createAccount(data: ICreateAccountDto): Promise<IResponse<ILoginResponse>>;
+    createCode(data: ICreateCodeDto): Promise<IResponse<CodeModel>>;
+    generateNewCode(data: ICreateCodeDto): Promise<IResponse<CodeModel>>;
+    validateCellPhone(data: IValidateCellPhoneDto): Promise<IResponse<boolean>>;
+}
