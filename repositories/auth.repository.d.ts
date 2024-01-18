@@ -14,8 +14,8 @@ export declare class AuthRepository implements IAuthRepository {
     getAdminToken(data: IAdminTokenDto): Promise<IResponse<IAdminTokenResponse>>;
     login(data: ILoginDto): Promise<IResponse<ILoginResponse>>;
     refreshToken(data: IRefreshDto): Promise<IResponse<ILoginResponse>>;
-    createAccount<ILoginResponse>(data: ICreateAccountDto, adminToken: string): Promise<IResponse<ILoginResponse>>;
-    createCode<CodeModel>(data: ICreateCodeDto, adminToken: string): Promise<IResponse<CodeModel>>;
+    createAccount(data: ICreateAccountDto, adminToken: string): Promise<IResponse<ILoginResponse>>;
+    createCode(data: ICreateCodeDto, adminToken: string): Promise<IResponse<CodeModel>>;
     generateNewCode(data: ICreateCodeDto, adminToken: string): Promise<IResponse<CodeModel>>;
     validateCellPhone(data: IValidateCellPhoneDto, adminToken: string): Promise<IResponse<boolean>>;
 }
