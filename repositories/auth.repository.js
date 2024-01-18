@@ -2,20 +2,16 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthRepository = void 0;
 class AuthRepository {
-    constructor(_http, _adminUser, _adminPassword, _apiUrl) {
-        this.adminUser = '';
-        this.adminPassword = '';
+    constructor(_http, _apiUrl) {
         this.apiUrl = '';
         this.http = _http;
-        this.adminUser = _adminUser;
-        this.adminPassword = _adminPassword;
         this.apiUrl = _apiUrl;
     }
-    async getAdminToken() {
+    async getAdminToken(data) {
         try {
             const response = await this.http.authenticationBasic(`${this.apiUrl}/admin-token`, {
-                username: this.adminUser,
-                password: this.adminPassword
+                username: data.adminUser,
+                password: data.adminPassword
             });
             return response;
         }

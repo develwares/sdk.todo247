@@ -7,8 +7,9 @@ import { ILoginResponse } from "../responses/login.response";
 import { IAdminTokenResponse } from "../responses/admin-token.response";
 import { IRefreshDto } from "../dtos/security/auth/refresh.dto";
 import { CodeModel } from "./../../models-security";
+import { IAdminTokenDto } from "../dtos/security/auth/admin-token.dto";
 export interface IAuthRepository {
-    getAdminToken(): Promise<IResponse<IAdminTokenResponse>>;
+    getAdminToken(data: IAdminTokenDto): Promise<IResponse<IAdminTokenResponse>>;
     login(data: ILoginDto): Promise<IResponse<ILoginResponse>>;
     refreshToken(data: IRefreshDto): Promise<IResponse<ILoginResponse>>;
     createAccount(data: ICreateAccountDto, adminToken: string): Promise<IResponse<ILoginResponse>>;
