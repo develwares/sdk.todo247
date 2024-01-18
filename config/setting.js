@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SettingTodo247 = void 0;
 const repositories_1 = require("./../repositories");
 const http_1 = require("./../http/http");
 class SettingTodo247 {
@@ -18,4 +19,5 @@ class SettingTodo247 {
         this.Auth = new repositories_1.AuthRepository(this.http, _adminUser, _adminPassword, this.endPoint.auth);
     }
 }
+exports.SettingTodo247 = SettingTodo247;
 //# sourceMappingURL=setting.js.map
