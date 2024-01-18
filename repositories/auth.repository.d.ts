@@ -7,10 +7,10 @@ import { ILoginResponse } from "./../interfaces/responses/login.response";
 import { IRefreshDto } from "./../interfaces/dtos/security/auth/refresh.dto";
 import { CodeModel } from "./../models-security";
 export declare class AuthRepository implements IAuthRepository {
-    http: Http;
-    adminUser: string;
-    adminPassword: string;
-    apiUrl: string;
+    private http;
+    private adminUser;
+    private adminPassword;
+    private apiUrl;
     constructor(_http: Http, _adminUser: string, _adminPassword: string, _apiUrl: string);
     getAdminToken(): Promise<IResponse<IAdminTokenResponse>>;
     login(data: ILoginDto): Promise<IResponse<ILoginResponse>>;
