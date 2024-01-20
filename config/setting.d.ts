@@ -1,8 +1,12 @@
-import { AuthRepository } from "./../repositories";
+import { AuthRepository, UserProfileRepository, UserRepository } from "./../repositories";
 import { Http } from "./../http/http";
 export declare class SettingTodo247 {
     private endPoint;
     http: Http;
-    Auth: AuthRepository;
+    Security: {
+        Auth: AuthRepository;
+        User: UserRepository;
+        UserProfile: UserProfileRepository;
+    };
     constructor(_urlBase: string);
 }

@@ -7,20 +7,20 @@ class BaseRepository {
         this.http = _http;
         this.apiUrl = _apiUrl;
     }
-    async create(entity) {
-        return this.http.post(this.apiUrl, entity);
+    async create(entity, userToken) {
+        return this.http.post(this.apiUrl, entity, { 'Authorization': `Bearer ${userToken}` });
     }
-    async update(id, entity) {
-        return this.http.put(`${this.apiUrl}/${id}`, entity);
+    async update(id, entity, userToken) {
+        return this.http.put(`${this.apiUrl}/${id}`, entity, { 'Authorization': `Bearer ${userToken}` });
     }
-    async remove(id) {
-        return this.http.delete(`${this.apiUrl}/${id}`);
+    async remove(id, userToken) {
+        return this.http.delete(`${this.apiUrl}/${id}`, { 'Authorization': `Bearer ${userToken}` });
     }
-    async getAll(param) {
-        return this.http.get(this.apiUrl, param);
+    async getAll(param, userToken) {
+        return this.http.get(this.apiUrl, param, { 'Authorization': `Bearer ${userToken}` });
     }
-    async getById(id) {
-        return this.http.get(`${this.apiUrl}/${id}`);
+    async getById(id, userToken) {
+        return this.http.get(`${this.apiUrl}/${id}`, {}, { 'Authorization': `Bearer ${userToken}` });
     }
 }
 exports.BaseRepository = BaseRepository;

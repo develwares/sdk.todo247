@@ -23,6 +23,7 @@ class Http {
             params,
             headers: {
                 'Content-Type': 'application/json',
+                ...headers
             }
         });
         return response.data;
@@ -31,6 +32,7 @@ class Http {
         const response = await axios_1.default.post(`${this.urlBase}${url}`, data, {
             headers: {
                 'Content-Type': 'application/json',
+                ...headers
             }
         });
         return response.data;
@@ -39,6 +41,7 @@ class Http {
         const response = await axios_1.default.put(`${this.urlBase}${url}`, data, {
             headers: {
                 'Content-Type': 'application/json',
+                ...headers
             }
         });
         return response.data;
@@ -47,6 +50,7 @@ class Http {
         const response = await axios_1.default.delete(`${this.urlBase}${url}`, {
             headers: {
                 'Content-Type': 'application/json',
+                ...headers
             }
         });
         return response.data;
