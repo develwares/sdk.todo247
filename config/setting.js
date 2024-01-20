@@ -7,6 +7,7 @@ class SettingTodo247 {
     constructor(_urlBase) {
         this.endPoint = {
             auth: '/api/auth',
+            code: '/api/codes',
             user: '/api/user',
             userProfile: '/api/user-profile'
         };
@@ -14,6 +15,7 @@ class SettingTodo247 {
         this.Security.Auth = new repositories_1.AuthRepository(this.http, this.endPoint.auth);
         this.Security.User = new repositories_1.UserRepository(this.http, this.endPoint.user);
         this.Security.UserProfile = new repositories_1.UserProfileRepository(this.http, this.endPoint.userProfile);
+        this.Security.Code = new repositories_1.CodeRepository(this.http, this.endPoint.code);
     }
 }
 exports.SettingTodo247 = SettingTodo247;
