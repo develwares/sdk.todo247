@@ -12,6 +12,8 @@ class SettingTodo247 {
             userProfile: '/api/user-profile'
         };
         this.http = new http_1.Http(_urlBase);
+        if (!this.Security)
+            this.Security = {};
         this.Security.Auth = new repositories_1.AuthRepository(this.http, this.endPoint.auth);
         this.Security.User = new repositories_1.UserRepository(this.http, this.endPoint.user);
         this.Security.UserProfile = new repositories_1.UserProfileRepository(this.http, this.endPoint.userProfile);
