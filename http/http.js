@@ -8,7 +8,7 @@ class Http {
         this.urlBase = _urlBase;
     }
     async authenticationBasic(url, params) {
-        const response = await axios_1.default.post(`${this.urlBase}${url}`, null, {
+        const response = await axios_1.default.post(`${this.urlBase}${url}`, {}, {
             auth: {
                 ...params
             },
