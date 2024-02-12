@@ -1,4 +1,4 @@
-import { CodeModel, IResponse } from "@todo247/common";
+import { CodeModel, IResponse } from "todo247-common";
 import { IAuthRepository } from "../../interfaces/repositories/security/auth.repository";
 import { IAdminTokenResponse } from "../../interfaces/responses/admin-token.response";
 import { Http } from "../../http/http";

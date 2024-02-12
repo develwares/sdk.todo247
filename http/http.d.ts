@@ -1,4 +1,4 @@
-import { IResponse } from '@todo247/common';
+import { IResponse } from 'todo247-common';
 export declare class Http {
     private urlBase;
     constructor(_urlBase: string);

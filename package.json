@@ -1,6 +1,6 @@
 {
-  "name": "@todo247/sdk",
-  "version": "1.0.0",
+  "name": "todo247-sdk",
+  "version": "1.0.1",
   "description": "sdk todo 247",
   "keywords": [
     "todo247",
@@ -29,10 +29,10 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@todo247/common": "github:develwares/common.todo247",
     "axios": "^1.6.5",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "todo247-common": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",

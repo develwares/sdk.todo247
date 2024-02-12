@@ -1,4 +1,4 @@
-import { CodeModel, IResponse } from "@todo247/common";
+import { CodeModel, IResponse } from "todo247-common";
 import { ILoginDto } from "../../dtos/security/auth/login.dto";
 import { ICreateAccountDto } from "../../dtos/security/auth/create-account.dto";
 import { IValidateCellPhoneDto } from "../../dtos/security/auth/validate-cellphone.dto";

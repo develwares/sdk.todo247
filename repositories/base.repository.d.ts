@@ -1,4 +1,4 @@
-import { IResponse } from "@todo247/common";
+import { IResponse } from "todo247-common";
 import { Http } from "../http/Http";
 import { IBaseWriteRepository } from "src/interfaces/repositories/base-write.repository";
 import { IBaseReadRepository } from "src/interfaces/repositories/base-read.repository";
