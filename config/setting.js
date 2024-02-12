@@ -3,9 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SettingTodo247 = void 0;
 const repositories_1 = require("./../repositories");
 const http_1 = require("./../http/http");
-const transport_repository_1 = require("./../repositories/carrier/transport.repository");
-const transport_location_repository_1 = require("./../repositories/carrier/transport-location.repository");
-const transport_qualification_repository_1 = require("./../repositories/carrier/transport-qualification.repository");
 class SettingTodo247 {
     constructor(_urlBase) {
         this.endPoint = {
@@ -27,9 +24,9 @@ class SettingTodo247 {
             UserProfile: new repositories_1.UserProfileRepository(this.http, this.endPoint.userProfile)
         };
         this.Carrier = {
-            Transport: new transport_repository_1.TransportRepository(this.http, this.endPoint.transport),
-            TransportLocation: new transport_location_repository_1.TransportLocationRepository(this.http, this.endPoint.transportLocation),
-            TransportQualitfication: new transport_qualification_repository_1.TransportQualificationRepository(this.http, this.endPoint.transportQualification)
+            Transport: new repositories_1.TransportRepository(this.http, this.endPoint.transport),
+            TransportLocation: new repositories_1.TransportLocationRepository(this.http, this.endPoint.transportLocation),
+            TransportQualitfication: new repositories_1.TransportQualificationRepository(this.http, this.endPoint.transportQualification)
         };
     }
 }
