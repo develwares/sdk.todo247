@@ -55,6 +55,9 @@ class Http {
         });
         return response.data;
     }
+    instance() {
+        return axios_1.default;
+    }
     static setHeaders() {
     }
 }

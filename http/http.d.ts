@@ -10,5 +10,6 @@ export declare class Http {
     post<T>(url: string, data?: any, headers?: {}): Promise<IResponse<T>>;
     put<T>(url: string, data?: any, headers?: {}): Promise<IResponse<T>>;
     delete<T>(url: string, headers?: {}): Promise<IResponse<T>>;
+    instance(): import("axios").AxiosStatic;
     private static setHeaders;
 }
