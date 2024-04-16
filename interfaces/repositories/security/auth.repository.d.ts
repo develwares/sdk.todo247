@@ -7,6 +7,7 @@ import { ILoginResponse } from "../../responses/login.response";
 import { IAdminTokenResponse } from "../../responses/admin-token.response";
 import { IRefreshDto } from "../../dtos/security/auth/refresh.dto";
 import { IAdminTokenDto } from "../../dtos/security/auth/admin-token.dto";
+import { CellPhoneExistsDto } from "./../../../interfaces/dtos";
 export interface IAuthRepository {
     getAdminToken(data: IAdminTokenDto): Promise<IResponse<IAdminTokenResponse>>;
     login(data: ILoginDto): Promise<IResponse<ILoginResponse>>;
@@ -15,4 +16,5 @@ export interface IAuthRepository {
     createCode(data: ICreateCodeDto, adminToken: string): Promise<IResponse<CodeModel>>;
     generateNewCode(data: ICreateCodeDto, adminToken: string): Promise<IResponse<CodeModel>>;
     validateCellPhone(data: IValidateCellPhoneDto, adminToken: string): Promise<IResponse<boolean>>;
+    generateCodeLogin(data: CellPhoneExistsDto, adminToken: string): any;
 }

@@ -18,4 +18,6 @@ __exportStar(require("./create-account.dto"), exports);
 __exportStar(require("./login.dto"), exports);
 __exportStar(require("./validate-cellphone.dto"), exports);
 __exportStar(require("./refresh.dto"), exports);
+__exportStar(require("./cell-phone-exists.dto"), exports);
+__exportStar(require("./admin-token.dto"), exports);
 //# sourceMappingURL=index.js.map

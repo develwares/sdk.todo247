@@ -82,6 +82,15 @@ class AuthRepository {
             throw error;
         }
     }
+    generateCodeLogin(data, adminToken) {
+        try {
+            return this.http.post(`${this.apiUrl}/generate-code-login`, data, { 'Authorization': `Bearer ${adminToken}` });
+        }
+        catch (error) {
+            console.log({ error2: error });
+            throw error;
+        }
+    }
 }
 exports.AuthRepository = AuthRepository;
 //# sourceMappingURL=auth.repository.js.map
